@@ -8,6 +8,7 @@
 pub mod l0_engine;
 pub mod hardware_optimizer;
 pub mod threat_engine;
+pub mod distributed_optimizer;
 
 pub use l0_engine::{
     SimdVec4,
@@ -35,4 +36,12 @@ pub use threat_engine::{
     RingBufferEvent,
     ZeroCopyRingBuffer,
     ZeroCopyPipeline,
+};
+
+pub use distributed_optimizer::{
+    CoreState,
+    OptimizationDecision,
+    MulticoreConsensus,
+    PerformanceMetrics,
+    SelfOptimizer,
 };
