@@ -6,6 +6,8 @@
 ============================================================================ */
 
 pub mod l0_engine;
+pub mod hardware_optimizer;
+pub mod threat_engine;
 
 pub use l0_engine::{
     SimdVec4,
@@ -14,4 +16,23 @@ pub use l0_engine::{
     simd_relu,
     L0NeuralNet,
     L0BatchProcessor,
+};
+
+pub use hardware_optimizer::{
+    DVFSState,
+    WorkloadProfile,
+    DVFSPredictor,
+    DVFSController,
+    ThermalState,
+    ThermalManager,
+    ThermalPolicy,
+};
+
+pub use threat_engine::{
+    ThreatType,
+    SyscallFeatures,
+    RealtimeThreatPredictor,
+    RingBufferEvent,
+    ZeroCopyRingBuffer,
+    ZeroCopyPipeline,
 };
